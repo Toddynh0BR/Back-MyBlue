@@ -26,7 +26,7 @@ app.post('/send', async (req, res) => {
 
     const mailOptions = {
         from: process.env.EMAIL_USER, 
-        to: 'galaxyplay41@gmail.com',
+        to: 'comercial@blueinnovation.com.br',
         subject: '🔔 Novo Agendamento Realizado!',
         html: text,
         headers: {
