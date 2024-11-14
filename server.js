@@ -27,8 +27,13 @@ app.post('/send', async (req, res) => {
     const mailOptions = {
         from: process.env.EMAIL_USER, 
         to: 'galaxyplay41@gmail.com',
-        subject: 'Novo Agendamento',
-        text: text,
+        subject: '🔔 Novo Agendamento Realizado!',
+        html: text,
+        headers: {
+          'X-Priority': '1 (Highest)',
+          'X-MSMail-Priority': 'High',
+          Importance: 'High'
+        }
     };
 
     try {
